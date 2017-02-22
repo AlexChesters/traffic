@@ -6,10 +6,12 @@ const schema = require('../../schemas/event')
 
 chai.use(require('chai-json-schema'))
 
+const traffic = require('../../../')
+const regions = require('../../../src/common/regions')
+
 describe('incidents', function () {
   describe('without specifying a region', function () {
     before(async function () {
-      const traffic = require('../../../')
       this.data = await traffic.incidents()
     })
     it('should return an array', function () {
@@ -22,8 +24,7 @@ describe('incidents', function () {
   })
   describe('whilst specifying a region', function () {
     before(async function () {
-      const traffic = require('../../../')
-      this.data = await traffic.incidents('North West')
+      this.data = await traffic.incidents(regions.NORTH_WEST)
     })
     it('should return an array', function () {
       expect(this.data).to.be.an('array')

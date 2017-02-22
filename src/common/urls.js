@@ -1,6 +1,14 @@
 const base = 'https://m.highways.gov.uk/feeds/rss'
 
 module.exports = {
-  incidents: _ => `${base}/UnplannedEvents.xml`,
-  roadworks: _ => `${base}/CurrentAndFutureEvents.xml`
+  incidents: region => {
+    return region
+      ? `${base}/UnplannedEvents/${encodeURIComponent(region)}.xml`
+      : `${base}/UnplannedEvents.xml`
+  },
+  roadworks: region => {
+    return region
+      ? `${base}/CurrentAndFutureEvents/${encodeURIComponent(region)}.xml`
+      : `${base}/CurrentAndFutureEvents.xml`
+  }
 }
