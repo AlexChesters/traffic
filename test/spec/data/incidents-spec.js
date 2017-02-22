@@ -12,7 +12,7 @@ const regions = require('../../../src/common/regions')
 describe('incidents', function () {
   describe('without specifying a region', function () {
     before(async function () {
-      this.data = await traffic.incidents()
+      this.data = await traffic.get.incidents()
     })
     it('should return an array', function () {
       expect(this.data).to.be.an('array')
@@ -24,7 +24,7 @@ describe('incidents', function () {
   })
   describe('whilst specifying a region', function () {
     before(async function () {
-      this.data = await traffic.incidents(regions.NORTH_WEST)
+      this.data = await traffic.get.incidents(regions.NORTH_WEST)
     })
     it('should return an array', function () {
       expect(this.data).to.be.an('array')

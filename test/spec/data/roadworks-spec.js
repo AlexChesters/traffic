@@ -15,7 +15,7 @@ describe('roadworks', function () {
   describe('without specifying a region', function () {
     before(async function () {
       this.timeout(7500)
-      this.data = await traffic.roadworks()
+      this.data = await traffic.get.roadworks()
     })
     it('should return an array', function () {
       expect(this.data).to.be.an('array')
@@ -28,7 +28,7 @@ describe('roadworks', function () {
   describe('whilst specifying a region', function () {
     before(async function () {
       this.timeout(7500)
-      this.data = await traffic.roadworks(regions.EASTERN)
+      this.data = await traffic.get.roadworks(regions.EASTERN)
     })
     it('should return an array', function () {
       expect(this.data).to.be.an('array')
