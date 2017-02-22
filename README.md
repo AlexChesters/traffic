@@ -13,23 +13,36 @@ First you must obtain a reference to the module:
 const traffic = require('uk-traffic')
 ```
 
-The module itself is an object. The properties on this object are
-functions that return promises containing the data.
-
 ## Properties
 ### Incidents
 ```javascript
-traffic.incidents()
+traffic.get.incidents(region: REGION?) : Promise
 ```
-Returns a promise containing an array of [events](#event).
+Takes a [region](#region), returns a promise containing an array of [events](#event).
 
 ### Roadworks
 ```javascript
-traffic.roadworks()
+traffic.get.roadworks(region: REGION?) : Promise
 ```
-Returns a promise containing an array of [events](#event).
+Takes a [region](#region), returns a promise containing an array of [events](#event).
 
 ## Data Types
+### Region
+A Region is a constant representing a region which can be used to
+narrow down results. The availble regions are exposed as
+`traffic.regions`.
+```javascript
+{
+  SOUTH_EAST: 'South East',
+  SOUTH_WEST: 'South West',
+  EASTERN: 'Eastern',
+  WEST_MIDLANDS: 'West Midlands',
+  EAST_MIDLANDS: 'East Midlands',
+  NORTH_WEST: 'North West',
+  NORTH_EAST: 'North East'
+}
+```
+
 ### Event
 An Event is the standard data type returned by the module for all
 functions. See below for an example.
