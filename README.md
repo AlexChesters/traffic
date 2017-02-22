@@ -60,3 +60,6 @@ functions. See below for an example.
   }
 }
 ```
+
+## Debugging/Troubleshooting
+Simply run the Node process with `DEBUG=traffic` to expose debug logging.

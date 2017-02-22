@@ -4,12 +4,14 @@
   "description": "A Node module to provide access to UK traffic information",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/spec --recursive"
+    "test": "mocha test/spec --recursive",
+    "test:debug": "DEBUG=traffic mocha test/spec --recursive"
   },
   "repository": "git@github.com:AlexChesters/traffic.git",
   "author": "Alex Chesters <alex.chesters@bbc.co.uk>",
   "license": "MIT",
   "dependencies": {
+    "debug": "^2.6.1",
     "ramda": "^0.23.0",
     "rss-url-parser": "^1.0.0"
   },
