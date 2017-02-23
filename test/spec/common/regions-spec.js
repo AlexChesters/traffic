@@ -18,5 +18,8 @@ describe('regions', function () {
     it('should recognise a valid, URI-encoded region regardless of casing', function () {
       expect(regions.isValid('north%20west')).to.equal('NORTH_WEST')
     })
+    it('should reject an invalid region', function () {
+      expect(regions.isValid('my made-up region')).to.equal(undefined)
+    })
   })
 })
