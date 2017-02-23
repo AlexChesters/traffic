@@ -14,6 +14,6 @@ const regions = {
 module.exports = Object.assign({}, regions, {
   isValid: region => {
     const sanitise = R.compose(capitalize.words, decodeURIComponent)
-    return R.has(sanitise(region))(R.invertObj(regions))
+    return (R.invertObj(regions))[sanitise(region)]
   }
 })

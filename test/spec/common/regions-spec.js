@@ -7,16 +7,16 @@ const regions = traffic.regions
 describe('regions', function () {
   describe('isValid', function () {
     it('should recognise a valid region', function () {
-      expect(regions.isValid('North West')).to.equal(true)
+      expect(regions.isValid('North West')).to.equal('NORTH_WEST')
     })
     it('should recognise a valid, URI-encoded region', function () {
-      expect(regions.isValid('North%20West')).to.equal(true)
+      expect(regions.isValid('North%20West')).to.equal('NORTH_WEST')
     })
     it('should recognise a valid region regardless of casing', function () {
-      expect(regions.isValid('north west')).to.equal(true)
+      expect(regions.isValid('north west')).to.equal('NORTH_WEST')
     })
     it('should recognise a valid, URI-encoded region regardless of casing', function () {
-      expect(regions.isValid('north%20west')).to.equal(true)
+      expect(regions.isValid('north%20west')).to.equal('NORTH_WEST')
     })
   })
 })
