@@ -29,15 +29,22 @@ traffic.get.roadworks(region: REGION?) : Promise
 ```
 Takes a [region](#region), returns a promise containing an array of [events](#event).
 
-### `traffic.region`
+### `traffic.regions`
 Contains information about the different regions available. Also
-exposes a helper function to determine if a region is valid:
+exposes a helper function to determine if a region is valid.
 ```javascript
-const realRegion = 'North West'
-const fakeRegion = 'Some made-up region'
-
-traffic.regions.isValid(realRegion) // true
-traffic.regions.isValid(fakeRegion) // false
+traffic.regions.isValid(region: String) : String?
+```
+If the region is valid the value returned will be an object key that
+can be used on the `traffic.regions` property. See below for an example
+usage
+```javascript
+const validRegion = traffic.regions.isValid('North West')
+if (validRegion) {
+  const data = await traffic.get.incidents(validRegion)
+} else {
+  console.error('Invalid region')
+}
 ```
 
 ## Data Types
