@@ -1,4 +1,7 @@
-module.exports = {
+const R = require('ramda')
+const capitalize = require('capitalize')
+
+const regions = {
   SOUTH_EAST: 'South East',
   SOUTH_WEST: 'South West',
   EASTERN: 'Eastern',
@@ -7,3 +10,10 @@ module.exports = {
   NORTH_WEST: 'North West',
   NORTH_EAST: 'North East'
 }
+
+module.exports = Object.assign({}, regions, {
+  isValid: region => {
+    const sanitise = R.compose(capitalize.words, decodeURIComponent)
+    return R.has(sanitise(region))(R.invertObj(regions))
+  }
+})

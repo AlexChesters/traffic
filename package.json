@@ -11,6 +11,7 @@
   "author": "Alex Chesters <alex.chesters@bbc.co.uk>",
   "license": "MIT",
   "dependencies": {
+    "capitalize": "^1.0.0",
     "debug": "^2.6.1",
     "ramda": "^0.23.0",
     "rss-url-parser": "^1.0.0"

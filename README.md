@@ -14,17 +14,31 @@ const traffic = require('uk-traffic')
 ```
 
 ## Properties
-### Incidents
+### `traffic.get`
+All sub-properties of the get property are used to return traffic data.
+
+#### Incidents
 ```javascript
 traffic.get.incidents(region: REGION?) : Promise
 ```
 Takes a [region](#region), returns a promise containing an array of [events](#event).
 
-### Roadworks
+#### Roadworks
 ```javascript
 traffic.get.roadworks(region: REGION?) : Promise
 ```
 Takes a [region](#region), returns a promise containing an array of [events](#event).
+
+### `traffic.region`
+Contains information about the different regions available. Also
+exposes a helper function to determine if a region is valid:
+```javascript
+const realRegion = 'North West'
+const fakeRegion = 'Some made-up region'
+
+traffic.regions.isValid(realRegion) // true
+traffic.regions.isValid(fakeRegion) // false
+```
 
 ## Data Types
 ### Region
