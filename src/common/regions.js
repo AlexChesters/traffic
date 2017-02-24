@@ -13,7 +13,7 @@ const regions = {
 
 module.exports = Object.assign({}, regions, {
   isValid: region => {
-    const sanitise = R.compose(capitalize.words, decodeURIComponent)
+    const sanitise = R.compose(capitalize.words)
     return (R.invertObj(regions))[sanitise(region)]
   }
 })
