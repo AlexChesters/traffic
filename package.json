@@ -1,6 +1,6 @@
 {
   "name": "uk-traffic",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "A Node module to provide access to UK traffic information",
   "main": "index.js",
   "scripts": {
