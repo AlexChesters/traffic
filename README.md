@@ -72,6 +72,7 @@ functions. See below for an example.
   "title": "M25 J25 clockwise access",
   "category": "Road Works",
   "delay": "Severe Disruption - in excess of 3 hours delay or road closure",
+  "link": "https://www.mycooltrafficsite.com/1234",
   "location": {
     "road": "M25",
     "county": "Greater London Authority",
