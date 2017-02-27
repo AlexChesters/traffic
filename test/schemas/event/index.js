@@ -1,6 +1,6 @@
 module.exports = {
   type: 'object',
-  required: ['title', 'category', 'delay', 'location'],
+  required: ['title', 'category', 'delay', 'link', 'location'],
   additionalProperties: false,
   properties: {
     title: {
@@ -11,6 +11,10 @@ module.exports = {
     },
     delay: {
       type: 'string'
+    },
+    link: {
+      type: 'string',
+      pattern: /^http|https/
     },
     location: {
       type: 'object',

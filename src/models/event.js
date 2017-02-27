@@ -6,10 +6,12 @@ module.exports = raw => {
   const latitude = Number.parseFloat(raw['rss:latitude']['#'])
   const longitude = Number.parseFloat(raw['rss:longitude']['#'])
   const [category, delay] = raw.categories
+  const link = raw.link
   return {
     title,
     category,
     delay,
+    link,
     location: {
       road,
       county,
