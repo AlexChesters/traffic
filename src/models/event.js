@@ -9,7 +9,7 @@ module.exports = raw => {
   const link = raw.link
   return {
     title,
-    category,
+    category: category.split(/(?=[A-Z])/).join(' '),
     delay,
     link,
     location: {
