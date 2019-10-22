@@ -4,8 +4,9 @@
   "description": "A Node module to provide access to UK traffic information",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/spec --recursive",
-    "test:debug": "DEBUG=traffic mocha test/spec --recursive"
+    "test:lint": "eslint .",
+    "test:unit": "jest",
+    "test": "npm run test:unit && npm run test:lint"
   },
   "repository": "git@github.com:AlexChesters/traffic.git",
   "author": "Alex Chesters <alex.chesters@bbc.co.uk>",
@@ -17,8 +18,12 @@
     "rss-url-parser": "^1.0.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-json-schema": "^1.4.0",
-    "mocha": "^3.2.0"
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0"
   }
 }
