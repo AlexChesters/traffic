@@ -3,7 +3,4 @@ const roadworks = require('./src/data/roadworks')
 
 const regions = require('./src/common/regions')
 
-module.exports = {
-  get: { incidents, roadworks },
-  regions
-}
+module.exports = { incidents, roadworks, regions }

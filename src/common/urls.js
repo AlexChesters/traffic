@@ -1,14 +1,16 @@
-const base = 'https://m.highways.gov.uk/feeds/rss'
+const regions = require('./regions')
+
+const base = 'https://m.highwaysengland.co.uk/feeds/rss'
 
 module.exports = {
-  incidents: region => {
+  incidents: (region) => {
     return region
-      ? `${base}/UnplannedEvents/${encodeURIComponent(region)}.xml`
+      ? `${base}/UnplannedEvents/${encodeURIComponent(regions[region])}.xml`
       : `${base}/UnplannedEvents.xml`
   },
-  roadworks: region => {
+  roadworks: (region) => {
     return region
-      ? `${base}/CurrentAndFutureEvents/${encodeURIComponent(region)}.xml`
+      ? `${base}/CurrentAndFutureEvents/${encodeURIComponent(regions[region])}.xml`
       : `${base}/CurrentAndFutureEvents.xml`
   }
 }
