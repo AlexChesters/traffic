@@ -1,4 +1,4 @@
-module.exports = raw => {
+module.exports = (raw) => {
   const title = raw.title.split('|')[0].trim()
   const region = raw['rss:region']['#']
   const county = raw['rss:county']['#']

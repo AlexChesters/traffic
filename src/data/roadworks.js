@@ -5,7 +5,7 @@ const debug = require('debug')('traffic')
 const urls = require('../common/urls')
 const event = require('../models/event')
 
-module.exports = async region => {
+module.exports = async (region) => {
   const url = urls.roadworks(region)
   debug('Making request to', url)
   const data = await parser(url)
