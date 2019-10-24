@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-const urls = require('../../../src/common/urls')
+const urls = require('../../../src/utils/urls')
 
 describe('URLs', () => {
   describe('incidents', () => {

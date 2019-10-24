@@ -1,7 +1,7 @@
 const parser = require('rss-url-parser')
 const debug = require('debug')('traffic')
 
-const urls = require('../common/urls')
+const urls = require('../utils/urls')
 const event = require('../models/event')
 
 module.exports = async (region) => {
