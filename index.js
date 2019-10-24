@@ -1,4 +1,4 @@
-const incidents = require('./src/data/incidents')
-const roadworks = require('./src/data/roadworks')
+const incidents = require('./src/fetch-incidents')
+const roadworks = require('./src/fetch-roadworks')
 
 module.exports = { incidents, roadworks }
