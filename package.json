@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A Node module to provide access to UK traffic information",
   "main": "index.js",
+  "engines": {
+    "node": "12.x.x",
+    "npm": "6.x.x"
+  },
   "scripts": {
     "test:lint": "eslint .",
     "test:unit": "jest __test__/spec/",
