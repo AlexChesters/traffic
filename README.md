@@ -8,7 +8,7 @@ A Node module to provide access to UK traffic information
 A Node.js environment with `async/await`
 
 # Installation
-`npm install uk-traffic`
+`npm install uk-traffic --save`
 
 # API
 First you must obtain a reference to the module:
