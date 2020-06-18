@@ -45,16 +45,20 @@ functions. See below for an example; all keys will be present, but they may have
 `undefined` or `null` values.
 ```javascript
 {
-  "title": "M25 J25 clockwise access",
-  "category": "Road Works",
-  "delay": "Severe Disruption - in excess of 3 hours delay or road closure",
-  "link": "https://www.mycooltrafficsite.com/1234",
-  "location": {
-    "road": "M25",
-    "county": "Greater London Authority",
-    "region": "Eastern",
-    "latitude": 51.68319,
-    "longitude": -0.04578481
+  title: "M25 J25 clockwise access",
+  category: "Road Works",
+  delay: "Severe Disruption - in excess of 3 hours delay or road closure",
+  link: "https://www.mycooltrafficsite.com/1234",
+  timing: {
+    start: "2020-07-07T21:00:00+01:00",
+    end: "2020-07-08T05:00:00+01:00"
+  },
+  location: {
+    road: "M25",
+    county: "Greater London Authority",
+    region: "Eastern",
+    latitude: 51.68319,
+    longitude: -0.04578481
   }
 }
 ```

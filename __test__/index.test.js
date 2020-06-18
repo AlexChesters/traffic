@@ -14,6 +14,7 @@ const schema = {
       'category',
       'delay',
       'link',
+      'timing',
       'location'
     ],
     properties: {
@@ -28,6 +29,21 @@ const schema = {
       },
       link: {
         type: 'string'
+      },
+      timing: {
+        type: 'object',
+        required: [
+          'start',
+          'end'
+        ],
+        properties: {
+          start: {
+            type: 'string'
+          },
+          end: {
+            type: 'string'
+          }
+        }
       },
       location: {
         type: 'object',
