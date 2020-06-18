@@ -13,6 +13,10 @@ First you must obtain a reference to the module:
 const traffic = require('uk-traffic')
 ```
 
+# Examples
+There are some example uses of the library in the [`examples/`](./examples)
+directory
+
 ## Properties
 
 #### Incidents
