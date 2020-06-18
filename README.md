@@ -5,7 +5,7 @@
 A Node module to provide access to UK traffic information
 
 # Prerequisities
-A Node.js environment with `async/await`
+Node 12.x
 
 # Installation
 `npm install uk-traffic --save`
