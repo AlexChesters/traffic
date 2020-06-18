@@ -2,8 +2,8 @@ name: Release
 
 on:
   push:
-    types: [created]
-    tags: "*"
+    tags:
+      - "*"
 
 jobs:
   build:
