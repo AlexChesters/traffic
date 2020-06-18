@@ -41,7 +41,8 @@ narrow down results. The following is a list of valid regions:
 
 ### Event
 An Event is the standard data type returned by the module for all
-functions. See below for an example.
+functions. See below for an example; all keys will be present, but they may have
+`undefined` or `null` values.
 ```javascript
 {
   "title": "M25 J25 clockwise access",
