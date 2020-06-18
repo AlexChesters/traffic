@@ -1,4 +1,6 @@
 # traffic
+[![npm version](https://badge.fury.io/js/uk-traffic.svg)](https://badge.fury.io/js/uk-traffic)
+
 A Node module to provide access to UK traffic information
 
 # Prerequisities
