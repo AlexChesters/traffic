@@ -11,6 +11,7 @@
     "npm": "6.x.x"
   },
   "scripts": {
+    "prewatch": "rm -rf build/",
     "watch": "tsc --project tsconfig.json -w",
     "prebuild": "rm -rf build/",
     "build": "tsc --project tsconfig.json",
