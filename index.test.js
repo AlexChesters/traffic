@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import traffic from './build'
+const traffic = require('./build')
 
 const { matchers } = require('jest-json-schema')
 expect.extend(matchers)
