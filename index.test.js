@@ -3,7 +3,7 @@
 const { matchers } = require('jest-json-schema')
 expect.extend(matchers)
 
-const traffic = require('../dist')
+const traffic = require('.')
 
 const schema = {
   type: 'array',

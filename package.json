@@ -12,7 +12,7 @@
     "build": "parcel build index.ts --target=node --bundle-node-modules",
     "test:lint": "eslint index.ts",
     "test:unit": "jest __test__/spec/",
-    "test:e2e": "jest __test__/index.test.js",
+    "test:e2e": "jest index.test.js",
     "pretest": "npm run build",
     "test": "npm run test:unit && npm run test:e2e && npm run test:lint",
     "preversion": "npm test",
@@ -26,6 +26,11 @@
     "rss-url-parser": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-typescript": "^7.10.1",
+    "@babel/types": "^7.10.3",
+    "babel-jest": "^26.1.0",
     "eslint": "^7.2.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.21.2",
