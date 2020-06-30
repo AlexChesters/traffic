@@ -7,7 +7,7 @@ const traffic = require('../build')
 
 async function main () {
   // fetch all roadworks for the north west
-  const roadworks = await traffic.roadworks('NORTH_WEST')
+  const roadworks = await traffic.roadworks(traffic.Region.NORTH_WEST)
 
   // determine the current date
   const now = new Date()

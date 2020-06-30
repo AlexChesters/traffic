@@ -1,5 +1,6 @@
 /* eslint-env jest */
 
+import { Region } from '../../build'
 import urls from '../../build/src/utils/urls'
 
 describe('URLs', () => {
@@ -10,7 +11,7 @@ describe('URLs', () => {
       expect(url).toEqual('https://m.highwaysengland.co.uk/feeds/rss/UnplannedEvents.xml')
     })
     test('allows a region to be specified', () => {
-      const url = urls.incidents('NORTH_WEST')
+      const url = urls.incidents(Region.NORTH_WEST)
 
       expect(url).toEqual('https://m.highwaysengland.co.uk/feeds/rss/UnplannedEvents/North%20West.xml')
     })
@@ -22,7 +23,7 @@ describe('URLs', () => {
       expect(url).toEqual('https://m.highwaysengland.co.uk/feeds/rss/CurrentAndFutureEvents.xml')
     })
     test('allows a region to be specified', () => {
-      const url = urls.roadworks('NORTH_WEST')
+      const url = urls.roadworks(Region.NORTH_WEST)
 
       expect(url).toEqual('https://m.highwaysengland.co.uk/feeds/rss/CurrentAndFutureEvents/North%20West.xml')
     })
