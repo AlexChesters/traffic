@@ -1,4 +1,4 @@
-import incidents from './src/fetch-incidents'
-import roadworks from './src/fetch-roadworks'
+import incidents from './src/fetch-incidents.js'
+import roadworks from './src/fetch-roadworks.js'
 
-export default { incidents, roadworks }
+module.exports = { incidents, roadworks }

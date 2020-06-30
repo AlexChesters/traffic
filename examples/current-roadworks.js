@@ -1,7 +1,7 @@
 // obtain a reference to the module
 // when using the module in your project, this line would be
 // const traffic = require('uk-traffic')
-const traffic = require('../dist')
+const traffic = require('../build')
 
 async function main () {
   // fetch all roadworks for the north west
