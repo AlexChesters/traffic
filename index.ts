@@ -2,13 +2,13 @@ import incidents from './src/fetch-incidents.js'
 import roadworks from './src/fetch-roadworks.js'
 
 enum Region {
-  SOUTH_EAST = 'South East',
-  SOUTH_WEST = 'South West',
+  SOUTH_EAST = 'South%20East',
+  SOUTH_WEST = 'South%20West',
   EASTERN = 'Eastern',
-  WEST_MIDLANDS = 'West Midlands',
-  EAST_MIDLANDS = 'East Midlands',
-  NORTH_WEST = 'North West',
-  NORTH_EAST = 'North East'
+  WEST_MIDLANDS = 'West%20Midlands',
+  EAST_MIDLANDS = 'East%20Midlands',
+  NORTH_WEST = 'North%20West',
+  NORTH_EAST = 'North%20East'
 }
 
 interface Event {
