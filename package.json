@@ -13,6 +13,7 @@
     "test:lint": "eslint index.ts",
     "test:unit": "jest __test__/spec/",
     "test:e2e": "jest __test__/index.test.js",
+    "pretest": "npm run build",
     "test": "npm run test:unit && npm run test:e2e && npm run test:lint",
     "preversion": "npm test",
     "postversion": "git push --follow-tags && npm publish"
