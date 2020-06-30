@@ -11,7 +11,7 @@
     "watch": "tsc --project tsconfig.json -w",
     "build": "parcel build index.ts --target=node --bundle-node-modules",
     "test:lint": "eslint index.ts",
-    "test:unit": "jest __test__/spec/",
+    "test:unit": "jest src",
     "test:e2e": "jest index.test.js",
     "pretest": "npm run build",
     "test": "npm run test:unit && npm run test:e2e && npm run test:lint",
@@ -40,6 +40,7 @@
     "jest": "^26.0.1",
     "jest-json-schema": "^2.1.0",
     "parcel": "^1.12.4",
+    "parcel-plugin-typescript": "^1.0.0",
     "typescript": "^3.9.5"
   }
 }

@@ -1,9 +1,9 @@
 /* eslint-env jest */
 
+import traffic from '.'
+
 const { matchers } = require('jest-json-schema')
 expect.extend(matchers)
-
-const traffic = require('.')
 
 const schema = {
   type: 'array',

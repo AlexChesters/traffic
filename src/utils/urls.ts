@@ -9,7 +9,7 @@ const regions = {
   NORTH_EAST: 'North East'
 }
 
-module.exports = {
+export default {
   incidents: (region) => {
     return region
       ? `${base}/UnplannedEvents/${encodeURIComponent(regions[region])}.xml`
