@@ -1,4 +1,33 @@
-export default (raw) => {
+import { Event } from '../../'
+
+interface RawData {
+  title: string,
+  'rss:region': {
+    '#': string
+  },
+  'rss:county': {
+    '#': string
+  },
+  'rss:road': {
+    '#': string
+  },
+  'rss:eventstart': {
+    '#': string
+  },
+  'rss:eventstop': {
+    '#': string
+  },
+  'rss:latitude': {
+    '#': string
+  },
+  'rss:longitude': {
+    '#': string
+  },
+  categories: [string, string],
+  link: string
+}
+
+export default (raw: RawData): Event => {
   const title = raw.title.split('|')[0].trim()
   const region = raw['rss:region']['#']
   const county = raw['rss:county']['#']

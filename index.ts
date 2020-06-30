@@ -11,4 +11,22 @@ enum Region {
   NORTH_EAST = 'North East'
 }
 
-export { incidents, roadworks, Region }
+interface Event {
+  title: string,
+  category: string,
+  delay: string,
+  link: string,
+  timing: {
+    start: string,
+    end: string
+  },
+  location: {
+    road: string,
+    county: string,
+    region: string,
+    latitude: number,
+    longitude: number
+  }
+}
+
+export { incidents, roadworks, Region, Event }
