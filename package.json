@@ -12,6 +12,7 @@
   },
   "scripts": {
     "watch": "tsc --project tsconfig.json -w",
+    "prebuild": "rm -rf build/",
     "build": "tsc --project tsconfig.json",
     "test:lint": "eslint .",
     "test:unit": "jest src",
