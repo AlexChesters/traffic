@@ -36,15 +36,18 @@ Takes a [region](#region), returns a promise containing an array of [events](#ev
 
 ## Data Types
 ### Region
-A Region is a constant representing a region which can be used to
-narrow down results. The following is a list of valid regions:
-* `SOUTH_EAST`
-* `SOUTH_WEST`
-* `EASTERN`
-* `WEST_MIDLANDS`
-* `EAST_MIDLANDS`
-* `NORTH_WEST`
-* `NORTH_EAST`
+A Region is an enum representing a region which can be used to
+narrow down results; you should use `traffic.Region` to get a valid region
+(e.g. `traffic.Region.NORTH_WEST`). The available regions are:
+```
+SOUTH_EAST
+SOUTH_WEST
+EASTERN
+WEST_MIDLANDS
+EAST_MIDLANDS
+NORTH_WEST
+NORTH_EAST
+```
 
 ### Event
 An Event is the standard data type returned by the module for all

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 // obtain a reference to the module
 // when using the module in your project, this line would be
 // const traffic = require('uk-traffic')
@@ -5,7 +7,7 @@ const traffic = require('../build')
 
 async function main () {
   // fetch all roadworks for the west midlands
-  const roadworks = await traffic.roadworks('WEST_MIDLANDS')
+  const roadworks = await traffic.roadworks(traffic.Region.WEST_MIDLANDS)
 
   // reduce the array of roadworks into a counter that looks something like
   /*

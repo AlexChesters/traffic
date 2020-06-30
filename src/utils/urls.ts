@@ -1,23 +1,16 @@
+import { Region } from '../../'
+
 const base = 'https://m.highwaysengland.co.uk/feeds/rss'
-const regions = {
-  SOUTH_EAST: 'South East',
-  SOUTH_WEST: 'South West',
-  EASTERN: 'Eastern',
-  WEST_MIDLANDS: 'West Midlands',
-  EAST_MIDLANDS: 'East Midlands',
-  NORTH_WEST: 'North West',
-  NORTH_EAST: 'North East'
-}
 
 export default {
-  incidents: (region) => {
+  incidents: (region: Region): string => {
     return region
-      ? `${base}/UnplannedEvents/${encodeURIComponent(regions[region])}.xml`
+      ? `${base}/UnplannedEvents/${encodeURIComponent(region)}.xml`
       : `${base}/UnplannedEvents.xml`
   },
-  roadworks: (region) => {
+  roadworks: (region: Region): string => {
     return region
-      ? `${base}/CurrentAndFutureEvents/${encodeURIComponent(regions[region])}.xml`
+      ? `${base}/CurrentAndFutureEvents/${encodeURIComponent(region)}.xml`
       : `${base}/CurrentAndFutureEvents.xml`
   }
 }
