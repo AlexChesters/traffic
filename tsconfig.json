@@ -4,5 +4,8 @@
     "module": "CommonJS",
     "declaration": true,
     "outDir": "build"
-  }
+  },
+  "exclude": [
+    "build"
+  ]
 }
