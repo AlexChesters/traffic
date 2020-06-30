@@ -10,7 +10,7 @@
   "scripts": {
     "watch": "tsc --project tsconfig.json -w",
     "build": "tsc --project tsconfig.json",
-    "test:lint": "eslint index.ts",
+    "test:lint": "eslint index.ts src/**/*.ts src/**/*.js",
     "test:unit": "jest src",
     "test:e2e": "jest index.test.js",
     "pretest": "npm run build",

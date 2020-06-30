@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import urls from './urls'
+import urls from '../../build/src/utils/urls'
 
 describe('URLs', () => {
   describe('incidents', () => {
