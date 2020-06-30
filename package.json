@@ -2,7 +2,10 @@
   "name": "uk-traffic",
   "version": "2.0.0",
   "description": "A Node module to provide access to UK traffic information",
-  "main": "index.ts",
+  "main": "build/index.js",
+  "files": [
+    "build/"
+  ],
   "engines": {
     "node": "12.x.x",
     "npm": "6.x.x"
