@@ -1,3 +1,10 @@
 {
-    "extends": "standard"
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "standard",
+        "plugin:@typescript-eslint/recommended"
+    ]
 }
