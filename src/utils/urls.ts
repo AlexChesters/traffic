@@ -11,12 +11,12 @@ enum Region {
 }
 
 export default {
-  incidents: (region: Region) => {
+  incidents: (region: Region): string => {
     return region
       ? `${base}/UnplannedEvents/${encodeURIComponent(Region[region])}.xml`
       : `${base}/UnplannedEvents.xml`
   },
-  roadworks: (region: Region) => {
+  roadworks: (region: Region): string => {
     return region
       ? `${base}/CurrentAndFutureEvents/${encodeURIComponent(Region[region])}.xml`
       : `${base}/CurrentAndFutureEvents.xml`
