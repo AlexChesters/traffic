@@ -5,8 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2020-07-22
+* Changes the debug environment variable needed to enable additional logging
+    * Before - `DEBUG=traffic`
+    * After - `DEBUG=uk-traffic`
+* Fixes a security vulnerability ([lodash (#1523)](https://www.npmjs.com/advisories/1523))
+* Fixes an error when building the project locally
+
 ## [2.0.1] - 2020-06-30
-Fixes a bug where the raw TypeScript files were references by the package rather
+* Fixes a bug where the raw TypeScript files were references by the package rather
 than the transpiled JavaScript
 
 ## [2.0.0] - 2020-06-30
