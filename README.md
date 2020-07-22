@@ -72,3 +72,7 @@ functions. See below for an example; all keys will be present, but they may have
   }
 }
 ```
+
+## Debugging
+You can enable additional debug logging by setting the environment variable
+`DEBUG=uk-traffic`
