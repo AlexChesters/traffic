@@ -41,7 +41,7 @@ export default (raw: RawData): Event => {
 
   return {
     title,
-    category: category.split(/(?=[A-Z])/).join(' '),
+    category: category,
     delay,
     link,
     timing: {
