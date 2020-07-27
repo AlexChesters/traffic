@@ -80,14 +80,14 @@ const schema = {
 describe('end-to-end', () => {
   describe('incidents', () => {
     test('it matches the schema', async () => {
-      const result = await traffic.incidents('NORTH_WEST')
+      const result = await traffic.incidents(traffic.Region.NORTH_WEST)
 
       expect(result).toMatchSchema(schema)
     })
   })
   describe('roadworks', () => {
     test('it matches the schema', async () => {
-      const result = await traffic.roadworks('NORTH_WEST')
+      const result = await traffic.roadworks(traffic.Region.NORTH_WEST)
 
       expect(result).toMatchSchema(schema)
     })
