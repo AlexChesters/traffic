@@ -3,7 +3,7 @@
 import event from '../../build/src/models/event'
 
 describe('event', () => {
-  it('adapts the data correctly', () => {
+  it('adapts good data correctly', () => {
     const raw = {
       title: 'M6 northbound between J32 and J33 | Northbound | Road Works',
       description: 'Location : The M6 northbound between junctions J32  and J33 . \n' +
@@ -123,5 +123,9 @@ describe('event', () => {
     expect(actual.location.region).toEqual('North West')
     expect(actual.location.latitude).toEqual(53.90963)
     expect(actual.location.longitude).toEqual(-2.7537072)
+  })
+
+  it('returns null for bad data', () => {
+    expect(event({ foo: 'bar' })).toEqual(null)
   })
 })
