@@ -87,7 +87,7 @@ describe('end-to-end', () => {
   })
 
   describe('incidents', () => {
-    test('it matches the schema', async () => {
+    it('it matches the schema', async () => {
       parser.mockImplementation(() =>
         [
           {
@@ -204,7 +204,7 @@ describe('end-to-end', () => {
     })
   })
   describe('roadworks', () => {
-    test('it matches the schema', async () => {
+    it('it matches the schema', async () => {
       parser.mockImplementation(() =>
         [
           {
