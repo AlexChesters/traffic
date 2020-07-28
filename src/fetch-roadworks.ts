@@ -10,5 +10,5 @@ export default async (region: Region): Promise<Event[]> => {
   const url = urls.roadworks(region)
   debug('Fetching data from', url)
   const data = await parser(url)
-  return data.map(event)
+  return data.map(event).filter(Boolean)
 }
