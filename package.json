@@ -1,6 +1,6 @@
 {
   "name": "uk-traffic",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A Node module to provide access to UK traffic information",
   "main": "build/index.js",
   "files": [
